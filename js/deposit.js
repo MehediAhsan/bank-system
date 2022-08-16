@@ -1,27 +1,27 @@
-//add event handler with the deposite button
+//add event handler with the deposit button
 document.getElementById('btn-deposit').addEventListener('click', function(){
-    //get the new deposite amount from deposit field
+    //get the new deposit amount from deposit field
     const depositField = document.getElementById('deposit-field');
     const newDepositAmount = parseFloat(depositField.value);
     
-    //get the previous deposite total
-    const depositTotalElement = document.getElementById('deposite-total');
-    const previousDepositeTotal = parseFloat(depositTotalElement.innerText);
+    //get the previous deposit total
+    const depositTotalElement = document.getElementById('deposit-total');
+    const previousDepositTotal = parseFloat(depositTotalElement.innerText);
 
-    //add the previous deposite total with new deposite amount
-    const currentDepositeTotal = previousDepositeTotal + newDepositAmount;
-    //set the total deposite into the deposite total element
-    depositTotalElement.innerText = currentDepositeTotal;
+    //add the previous deposit total with new deposit amount
+    const currentDepositTotal = previousDepositTotal + newDepositAmount;
+    //set the total deposit into the deposit total element
+    depositTotalElement.innerText = currentDepositTotal;
 
     //get the previous balance total
     const balanceTotalElement = document.getElementById('balance-total');
     const previousBalanceTotal = parseFloat(balanceTotalElement.innerText);
 
-    //add the previous balance total with new deposite amount
+    //add the previous balance total with new deposit amount
     const currentBalanceTotal = previousBalanceTotal + newDepositAmount;
     //set the total balace into the balance total element
     balanceTotalElement.innerText = currentBalanceTotal;
 
-    //clear the value in the deposite field
+    //clear the value in the deposit field
     depositField.value = '';
 })
